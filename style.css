@@ -1,0 +1,178 @@
+/*this will target styling in all h1s*/
+h1{
+    color: rgb(150, 77, 77); /*color is the property and red is the value */
+    text-align: center;
+    text-shadow: 4px 4px 3px red;
+}
+/*when I am going to target a class i start with . and followed by class name */
+.title{
+color: rgb(28, 77, 238);
+}
+
+/*another way to focus and style is by targetting id. Class can be given my multiple elements where as id = only one thing can have it. Example in index.html italic has id. and Styling id is by starting with #*/
+#italic{
+    color: orange;
+}
+nav{ /*since we are having only one nav bar, it ok to target nav directly for styling without making any class or ids*/
+        background-color: aquamarine;
+        text-align: center;
+    }
+
+.nav-wrapper{
+    background-color: blue;
+}
+a{ /*we are targeting link tag a to make changes to it such as remove underlines*/
+text-decoration-line: none;
+}
+
+nav ul{ /*we are targeting unoder list in Nav. If we just do UL then it may impact all ULs*/
+list-style: none;
+}
+nav li {
+    display: inline-block;
+    padding: 20px;
+
+}
+.container{
+    border: 2px solid grey ;/*means for container class we are using 5 px boarder with solid line and grey color */
+    margin: 50px 5px 25px 10px; /*margin is white background outside boarder. Clockwise values entered */
+    padding: 30px 0px 0px 15px; /*padding is white background inside boarder. Clockwise values entered */
+}
+
+/*Styling our nav bar */
+.box {
+    /*display: inline-block; display is another styling property. Inline doesn't listen to height and width given below. It just takes exact size of text. Default display property is blocked but can be changed to inline. */
+    height: 200px;
+    width: 200px;
+    background: rgb(82, 82, 110);
+    margin: 10px ; /*this means between boxes there are 10px top and bottm and 0 right and left*/
+    
+}
+.cicleImg{ /* instead of styling cicleImg class we can style img. But it makes all images cicle */
+    border-radius: 50%;
+}
+img{
+    box-shadow: 10px 15px 3px grey ;
+}
+
+.flex{
+    margin: 30px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+@keyframes fadeMe {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#box1{
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation{
+0%{transform: rotate(90deg);}
+50%{transform: rotate(180deg);}
+100%{transform: rotate(360deg);}
+}
+
+#box2{
+    animation-name: rotation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#box6{
+    top: 100px;
+    left: 200px;
+    position: fixed; /*good option for nav bar*/
+}
+/*css materialized. similar to bootstarp. Visit https://materializecss.com/*/
+form input, textarea, button{
+    display: block;
+    margin: 30px;
+}
+
+.contact.box{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    margin: 30px;
+}
+.input-field{
+    margin: 20px;
+}
+/*css grid. visit https://gridbyexample.com/*/
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: #fff;
+    color: #444;
+}
+
+.Box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;/*means a starts and column 1 and spans 2 column i.e. 1 and 2 */
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col /span 5 ;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: repeating-linear-gradient(pink, yellow, purple, orange );
+}
+.d {
+    grid-column: col 2 / span;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col 4 / span  1;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;/*z-index helps put element on top of another one*/
+    display: flex;
+    justify-content: center;
+    background-image: repeating-linear-gradient(orange, purple, yellow, pink);
+}
